@@ -6,17 +6,19 @@
 <div id="wrapper" {{#is "index"}}class="fade-in"{{/is}}>
 
    {{#is "index"}}
-      {{#if @config.custom.introText}}
-         <div id="intro">
-            {{{@config.custom.introText}}}
+      {{#unless @renderer.isFirstPage}}
+         {{#if @config.custom.introText}}
+            <div id="intro">
+               {{{@config.custom.introText}}}
 
-            <ul class="actions">
-               <li>
-                  <a href="#header" class="button icon solid solo fa-arrow-down scrolly">{{ translate 'partials.top.continue' }}</a>
-               </li>
-            </ul>
-         </div>
-      {{/if}}
+               <ul class="actions">
+                  <li>
+                     <a href="#header" class="button icon solid solo fa-arrow-down scrolly">{{ translate 'partials.top.continue' }}</a>
+                  </li>
+               </ul>
+            </div>
+         {{/if}}
+      {{/unless}}
    {{/is}}
 
    <header id="header">

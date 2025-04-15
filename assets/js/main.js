@@ -197,7 +197,7 @@
 						.css('transition', 'none');
 
 	// Intro.
-		var $intro = $('#intro');
+		var $intro = $('#intro2');
 
 		if ($intro.length > 0) {
 
